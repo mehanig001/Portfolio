@@ -1,0 +1,329 @@
+*{
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+body{
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+
+
+}
+header{
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+    align-items: stretch;
+   
+    background-color: #5e5454;
+}
+.left{
+    font-size: 1.6rem;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+nav ul li{
+    list-style: none;
+    margin: 0 25px;
+    list-style: none;
+    text-decoration: none;
+
+}
+nav ul li a{
+    text-decoration: none;
+    list-style: none;
+}
+nav ul li a:hover{
+    color: rgb(199, 67, 199);
+    /* font-size: 1.01rem; */
+}
+
+.container{
+  
+    margin: auto;
+    border: 2px solid white;
+    box-sizing: content-box;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    padding: 50px;
+    margin-bottom: 40px;
+    border-radius:10px;
+
+
+}
+
+/* .container > div{ /*first div ko hi width 32 mile taki text alignment sahi rahe*/
+  
+    /* align-items: center; */
+/* } */ 
+.container .buttons a{
+    text-decoration: none;
+
+}
+.leftSection{
+    /* background-color: red; */
+    font-size: 2.5rem;
+    text-align: center;
+    /* margin: 25px 0px; */
+}
+.leftSection .buttons{
+    padding: 15px;
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+    gap:20px;
+}
+.leftSection .btn{
+    padding: 5px 10px;
+    border: 2px solid white;
+    background-color: #4a378d29;
+    border-radius: 5px;
+    cursor: pointer;
+    height: fit-content;
+    font-family: 'Poppins';
+    min-width:150px;
+}
+.leftSection .btn:hover{
+    background-color: #8169d7;
+    /* font-size: 1.008rem; */
+}
+
+.rightSection img{
+    /* background-color: red; */
+    width: 90%;
+    border-radius: 120px;
+ 
+    box-shadow: 55px red;
+    position: relative;
+    bottom: 32px;
+
+
+}
+#about .top{
+    text-align: center;
+}
+#about .p1 {
+    text-align: center;
+    font-size: x-large;
+    font-family: cursive;
+    padding: 50px;
+}
+#about .p2{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#about .resume{
+    align-items: start;
+    background-color:#4a378d29;
+    box-shadow: 0 0 5px cyan, 0 0 45px#00ff8e;
+    border-radius: 4px;
+    font-size: large;
+    margin-top: 30px;
+    
+}
+#about .resume:hover{
+    cursor: pointer;
+    font-size: 1.015rem;
+    background-color: rgb(172, 162, 202)
+    
+
+}
+#education .top {
+    text-align: center;
+    width: 100%;
+  
+}
+#education .top .h1 {
+    text-align: center;
+   
+  
+}
+#education .dabba{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+#education .leftblock,.rightblock{
+    z-index: -1;
+    border: 2px solid black;
+    background-color: #4a378d29;
+    width: 380px;
+    text-align: center;
+}
+
+
+#education img{
+    height: 300px;
+    width: 370px;
+    
+}
+#skills .badabox{
+    display: flex;
+    justify-content:center;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+#skills .top{
+    z-index: 1;
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+
+}
+#skills .chotabox{
+    border: 2px solid black;
+    background-color: #4a378d29;
+    margin: 20px;
+    
+}
+#skills .chotabox img{
+    height: 100px;
+    width: 135px;
+    margin:10px 15px 10px 15px;
+
+}
+#skills .chotabox h2{
+    text-align: center;
+    text-decoration: dashed;
+}
+
+#contact .name{
+    font-size: xx-large;
+}
+#contact img{
+    height: 25px;
+    width: 25px;
+    margin: 0px 10px;
+}
+#contact .right .contact_no, .mail{
+    margin: 0px 10px;
+}
+
+#contact .right{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+footer .foot{
+    background-color: #211d24;
+}
+
+footer .foot .center{
+    text-align: center;
+}
+footer .foot .right{
+    text-align: center;
+}
+
+@media (max-width:800px){
+    #home{
+        flex-direction: column-reverse;
+
+    }
+    #home .leftSection{
+        font-size: 2em;
+
+    }
+    #home .rightSection {
+        width: 30%;
+        align-items: center;
+    }
+    #home .buttons .btn a{
+        font-size: 1.5em;
+    }
+    #about .p1 {
+        padding: 0px;
+        font-size: medium;
+    }
+   
+    
+}
+@media (max-width:500px){
+#education img{
+    height: 150px;
+    width: 185px;
+    
+}
+#education .leftblock,.rightblock{
+    width: 185px;
+
+}
+#education .description, h2{
+    font-size: 1rem;
+    
+}
+#skills .chotabox img{
+    height: 55px;
+    width: 65px;
+    margin:4px 10px ;
+
+}
+.buttons{
+    flex-direction: column;
+}
+#contact .right .handles{
+    width: 100%;
+    align-items: center;
+    margin: auto;
+}   
+#contact .right {
+    text-align: center;
+
+}   
+#contact .right .contact_no{
+    width: 100%;
+    align-items: center;
+    margin: auto;
+
+}   
+#contact .right .mail{
+    width: 100%;
+    align-items: center;
+    margin: auto;
+
+}   
+
+
+}
+@media (max-width:300px){
+    #about p{
+        font-size: 0.8rem;
+    }
+    #education h1{
+        font-size: 1rem;
+    }
+    #education img{
+        height: 80px;
+        width: 95px;
+        
+    }
+    #education .leftblock,.rightblock{
+        width: 95px;
+    
+    }
+
+}

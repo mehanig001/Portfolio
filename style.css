@@ -239,7 +239,7 @@ footer .foot .right{
     text-align: center;
 }
 
-@media (max-width:860px){
+@media (max-width:860 px){
     #home{
         flex-direction: column-reverse;
 

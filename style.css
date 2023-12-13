@@ -6,7 +6,8 @@
     font-family: 'Poppins';
 }
 body{
-    background-color: black;
+    background-color: #010e24;
+    /* background-color: #1f2d24; */
     justify-content: center;
     align-items: center;
 
@@ -22,17 +23,23 @@ nav{
     flex-wrap: wrap;
 
     justify-content: space-around;
-    align-items: stretch;
-   
-    background-color: #5e5454;
+    align-items: center;
+    background-color: #131313;
+
 }
 .left{
     font-size: 1.6rem;
+    cursor: default;
+    font-weight: 400;
+    color: #ffffff;
+    opacity:0;
+    animation:slideRight 1s ease forwards;
 }
 nav ul{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 8px;
 
 }
 nav ul li{
@@ -40,21 +47,28 @@ nav ul li{
     margin: 0 25px;
     list-style: none;
     text-decoration: none;
+    font-weight: 200;
 
 }
 nav ul li a{
+    display: inline-block;
     text-decoration: none;
     list-style: none;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 nav ul li a:hover{
-    color: rgb(199, 67, 199);
+    color: rgb(194, 45, 220);
     /* font-size: 1.01rem; */
 }
+
 
 .container{
   
     margin: auto;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     box-sizing: content-box;
     display: flex;
     justify-content: space-around;
@@ -66,9 +80,13 @@ nav ul li a:hover{
     margin-bottom: 40px;
     border-radius:10px;
 
+    height: 85vh;
 
 }
 
+#contact{
+    height: fit-content;
+}
 /* .container > div{ /*first div ko hi width 32 mile taki text alignment sahi rahe*/
   
     /* align-items: center; */
@@ -77,11 +95,46 @@ nav ul li a:hover{
     text-decoration: none;
 
 }
+#home{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+  
+
+}
 .leftSection{
     /* background-color: red; */
     font-size: 2.5rem;
     text-align: center;
     /* margin: 25px 0px; */
+}
+.leftSection p{
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.7s;
+}
+.leftSection .secondPara{
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.7s;
+}
+#home span{
+    display: inline-block;
+    opacity:0;
+    animation:slideRight 1s ease forwards;
+    animation-delay: 1.2s;
+}
+#home  #element{
+    
+    opacity:0;
+    animation:slideLeft 1s ease forwards;
+    animation-delay: 1.2s;
+}
+.leftSection .name{
+    color: #b377eb;
+    font-weight: 500;
+    font-size: 3.1rem;
+    
 }
 .leftSection .buttons{
     padding: 15px;
@@ -89,6 +142,8 @@ nav ul li a:hover{
     justify-content:space-evenly;
     align-items: center;
     gap:20px;
+   
+
 }
 .leftSection .btn{
     padding: 5px 10px;
@@ -99,12 +154,17 @@ nav ul li a:hover{
     height: fit-content;
     font-family: 'Poppins';
     min-width:150px;
+    opacity:0;
+    animation:slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 .leftSection .btn:hover{
     background-color: #8169d7;
     /* font-size: 1.008rem; */
 }
-
+.rightSection{
+    height: fit-content;
+}
 .rightSection img{
     /* background-color: red; */
     width: 90%;
@@ -114,12 +174,27 @@ nav ul li a:hover{
     position: relative;
     bottom: 32px;
 
+    opacity:0;
+    animation:zoomIn 1s ease forwards;
+    animation-delay: 1s;
+}
 
+#home{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  
 }
 #about .top{
     text-align: center;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.7s;
 }
 #about .p1 {
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.7s;
     text-align: center;
     font-size: x-large;
     /* font-family: cursive; */
@@ -129,6 +204,9 @@ nav ul li a:hover{
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1.5s;
 }
 #about .resume{
     align-items: start;
@@ -137,18 +215,24 @@ nav ul li a:hover{
     border-radius: 4px;
     font-size: large;
     margin-top: 30px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1.7s;
     
 }
 #about .resume:hover{
     cursor: pointer;
     font-size: 1.015rem;
-    background-color: rgb(172, 162, 202)
+    background-color: rgb(119, 101, 172)
     
 
 }
 #education .top {
     text-align: center;
     width: 100%;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.7s;
   
 }
 #education .top .h1 {
@@ -160,8 +244,18 @@ nav ul li a:hover{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+}
+#education .leftblock{
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0.7s;
+}
+#education .rightblock{
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.7s;
 }
 #education .leftblock,.rightblock{
     z-index: -1;
@@ -191,12 +285,17 @@ nav ul li a:hover{
     width: 100%;
     text-align: center;
     overflow: hidden;
-
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
 }
 #skills .chotabox{
     border: 2px solid black;
     background-color: #4a378d29;
     margin: 20px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+
     
 }
 #skills .chotabox img{
@@ -209,17 +308,27 @@ nav ul li a:hover{
     text-align: center;
     text-decoration: dashed;
 }
-
+#contact{
+    display: flexbox;
+}
 #contact .name{
-    font-size: xx-large;
+    font-weight: 500;
+    font-size: 2rem;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
 }
 #contact img{
     height: 25px;
     width: 25px;
     margin: 0px 10px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
 }
 #contact .right .contact_no, .mail{
-    margin: 0px 10px;
+    align-items: center;
+    margin:0px 50px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
 }
 
 #contact .right{
@@ -229,7 +338,7 @@ nav ul li a:hover{
 
 }
 footer .foot{
-    background-color: #211d24;
+    background-color: #070607;
 }
 
 footer .foot .center{
@@ -239,7 +348,7 @@ footer .foot .right{
     text-align: center;
 }
 
-@media (max-width:860 px){
+@media (max-width:860px){
     #home{
         flex-direction: column-reverse;
 
@@ -249,7 +358,7 @@ footer .foot .right{
 
     }
     #home .rightSection {
-        width: 30%;
+        height: fit-content;
         align-items: center;
     }
     #home .buttons .btn a{
@@ -263,6 +372,10 @@ footer .foot .right{
     
 }
 @media (max-width:500px){
+    .navbar .right{
+        display: none;
+    }
+  
 #education img{
     height: 150px;
     width: 185px;
@@ -326,4 +439,60 @@ footer .foot .right{
     
     }
 
+}
+
+
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes zoomIn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform:scale(1);
+        opacity: 1;
+    }
 }

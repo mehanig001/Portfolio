@@ -80,7 +80,9 @@ nav ul li a:hover{
     margin-bottom: 40px;
     border-radius:10px;
 
-    height: 100vh;
+    height: 90vh;
+    /* height: fit-content; */
+
 
 }
 
@@ -347,10 +349,10 @@ footer .foot .center{
 footer .foot .right{
     text-align: center;
 }
-
 @media (max-width:960px){
     .container{
         height: fit-content;
+    }
 }
 @media (max-width:860px){
     #home{

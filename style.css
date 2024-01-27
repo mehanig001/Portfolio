@@ -7,7 +7,8 @@
 }
 body{
     background-color: #010e24;
-    /* background-color: #1f2d24; */
+    background-image: linear-gradient(to right,  #010e24, rgb(46, 10, 91));
+    
     justify-content: center;
     align-items: center;
 
@@ -21,7 +22,7 @@ header{
 nav{
     display: flex;
     flex-wrap: wrap;
-
+    height: 8vh;
     justify-content: space-around;
     align-items: center;
     background-color: #131313;
@@ -39,7 +40,7 @@ nav ul{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 8px;
+    margin-top: 12px;
 
 }
 nav ul li{
@@ -279,6 +280,7 @@ nav ul li a:hover{
     gap: 10px;
     flex-wrap: wrap;
     align-items: center;
+    height: fit-content;
     /* border: 2px solid red; */
 }
 #skills .top{
@@ -313,9 +315,10 @@ nav ul li a:hover{
 #contact{
     display: flexbox;
 }
-#contact .name{
+#contact .name, .center{
+    font-style: italic;
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.5rem;
     opacity: 0;
     animation: slideRight 1s ease forwards;
 }
@@ -339,16 +342,19 @@ nav ul li a:hover{
     justify-content: center;
 
 }
-footer .foot{
-    background-color: #070607;
+#contact{
+    display: flex;
+    justify-content: space-around;
+    background-color: #131313;
+    align-items: center;
 }
-
+/*
 footer .foot .center{
     text-align: center;
 }
 footer .foot .right{
     text-align: center;
-}
+} */
 @media (max-width:960px){
     .container{
         height: fit-content;
@@ -374,6 +380,10 @@ footer .foot .right{
         padding: 0px;
         font-size: medium;
     }
+
+    #contact .name, .center{
+        font-size: 0.7rem;
+    }
    
     
 }
@@ -381,6 +391,10 @@ footer .foot .right{
     .navbar .right{
         display: none;
     }
+    #contact .center{
+        display: none;
+    }
+   
   
 #education img{
     height: 150px;
@@ -429,6 +443,9 @@ footer .foot .right{
 
 }
 @media (max-width:300px){
+    #contact .name{
+        display: none;
+    }
     #about p{
         font-size: 0.8rem;
     }

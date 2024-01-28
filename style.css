@@ -22,7 +22,7 @@ header{
 nav{
     display: flex;
     flex-wrap: wrap;
-    height: 8vh;
+    height: 9.5vh;
     justify-content: space-around;
     align-items: center;
     background-color: #131313;
